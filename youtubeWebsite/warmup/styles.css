@@ -1,0 +1,79 @@
+.subscribe-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  /* height: 40px; 
+  width: 100px; */ /* Rule of thumb: size HTML tags through padding + margin, restrict use of width/height */
+  padding: 10px 15px 10px 15px;
+  border-radius: 2px; /* More pixels make it rounded */
+  cursor: pointer;
+  margin-right: 6px;
+  transition: opacity 0.15s; /* Allows for a smooth transition ([property] [seconds])*/
+  vertical-align: top;
+}
+
+.subscribe-btn:hover {
+  opacity: 0.8; /* Used to "fade-out" and element */
+}
+
+.subscribe-btn:active {
+  opacity: 0.4;
+}
+
+.join-btn {
+  background-color: white;
+  color: rgb(17, 113, 209);
+  border-color: rgb(17, 113, 209);
+  border-style: solid;
+  border-width: 1px;
+  /* height: 40px;
+  width: 65px; */
+  padding: 9px 15px 9px 15px;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: background-color 0.15s, color 0.15s; /* Takes multiple args separated by comma */
+  vertical-align: top;
+}
+
+.join-btn:hover {
+  background-color: rgb(17, 113, 209);
+  color: white;
+}
+
+.join-btn:active {
+  opacity: 0.7;
+}
+
+.tweet-btn {
+  background-color: rgb(8, 137, 211);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px; /* To get the button really round, it is half the height */
+  /* height: 40px;
+  width: 70px; */
+  padding: 9px 15px 9px 15px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: box-shadow 0.15s;
+  vertical-align: top;
+}
+
+.tweet-btn:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15s);
+}
+
+.header-style {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 25px;
+  width: 350px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.views-style {
+  margin: 0;
+}

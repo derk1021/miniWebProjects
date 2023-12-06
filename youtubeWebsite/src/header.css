@@ -1,0 +1,177 @@
+.header {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed; /* Fixed: placed in the browser window (doesn't move when you scroll)
+                      Absolute: placed on the page (moves when you scroll) */
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(228, 228, 228);
+  background-color: white;
+  padding: 10px 10px;
+  z-index: 100; /* This makes the HTML element pushed "in front" of other elements. */
+}
+
+.header-left {
+  margin-right: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.three-icons-logo {
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.search-btn {
+  height: 40px;
+  width: 66px;
+  background-color: rgb(240, 240, 240);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  margin-left: -1px;
+  margin-right: 10px;
+  transition: opacity 1s;
+  cursor: pointer;
+}
+
+.search-btn .tool-tip,
+.voice-search-btn .tool-tip,
+.upload-wrapper .tool-tip,
+.yt-wrapper .tool-tip,
+.notif-wrapper .tool-tip {
+  font-family: Roboto, Arial;
+  background-color: grey;
+  position: absolute;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 2px;
+  bottom: -33px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none; /* If we hover over this, there is no way to click it */
+  white-space: nowrap; /* The text is set horizontally */
+  justify-content: center;
+  align-items: center;
+}
+
+.search-btn,
+.voice-search-btn,
+.upload-wrapper,
+.yt-wrapper,
+.notif-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-btn:hover .tool-tip,
+.voice-search-btn:hover .tool-tip,
+.upload-wrapper:hover .tool-tip,
+.yt-wrapper:hover .tool-tip,
+.notif-wrapper:hover .tool-tip {
+  opacity: 1;
+}
+
+.search-icon {
+  padding-top: 5px;
+  height: 25px;
+}
+
+.voice-search-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(245, 245, 245);
+}
+
+.voice-search-icon {
+  height: 24px;
+}
+
+.yt-logo {
+  height: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  height: 36px;
+  padding-left: 16px;
+  font-size: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  width: 0; /* Allows the search bar to shrink upon minimization of browser window: OVERALL: SHRINK*/
+}
+
+.search-bar::placeholder {
+  font-family: Roboto, Arial;
+  font-size: 16px;
+}
+
+.header-middle {
+  flex: 1;
+  /* margin-left: 70px; */
+  /* margin-right: 35px; */
+  align-items: center;
+  display: flex;
+  max-width: 500px; /* This makes it so that minimizing the screen width <= 500 
+  pixels will make the search bar stretch. Stretching or maximizing the screen width > 500 
+  will keep the search bar width 500 pixels and not stretch*/
+}
+
+.header-right {
+  width: 175px;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  flex-shrink: 0; /* As you minimize your browser screen, 
+  flexblox naturally resizes the icons/elements to fit within the page. Making flex-shrink to 
+  0 maintains the original size of these elements; OVERALL: DON'T SHRINK THE CONTENTS*/
+}
+.upload-icon {
+  height: 24px;
+}
+
+.yt-apps-icon {
+  height: 24px;
+}
+
+.notif-wrapper {
+  position: relative;
+}
+
+.notif-icon {
+  height: 24px;
+}
+
+.notif-icon-number {
+  position: absolute;
+  border-radius: 12px;
+  background-color: rgb(200, 0, 0);
+  color: white;
+  right: -4px;
+  top: -3px;
+  font-size: 11px;
+  padding: 2px 5px;
+  font-family: Roboto, Arial;
+}
+
+.profile-icon {
+  height: 24px;
+  border-radius: 16px;
+}
