@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Just setting the background page  */
+.background-fill {
+  height: 100vh;
+  width: 100%; /* necessary? */
+  background: linear-gradient(to right, rgb(5, 96, 152), rgb(26, 33, 181));
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Aligning the items center (caption + search box) */
+.todo-list-container {
+  width: 350px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 150px;
+  /* padding: 40px; */
+  /* display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: column; */
+}
+
+.todo-header-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 5px;
+  padding: 40px 0 0 30px;
+}
+
+.todo-header-img h2 {
+  font-size: 20px;
+}
+
+.todo-header-img img {
+  height: 25px;
+}
+
+.input-add {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgb(240, 240, 240);
+}
+
+.input-add input {
+  flex: 1;
+  padding-left: 10px;
+  border: none;
+  background: transparent;
+  outline: none; /* When you click on the input field, the border will not appear */
+}
+
+.input-add button {
+  padding: 10px 45px;
+  border-radius: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  background-color: rgb(97, 207, 244);
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  /* border: red 1px solid; */
+  /* justify-content: center; */
+  align-items: left baseline;
+  padding-left: 40px; /* Adjust as needed for bullet point formatting */
+  margin-top: 10px;
+}
+
+/* Uncompleted task creation part 1 */
+.list-container li {
+  list-style-type: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /* border: blue 1px solid; */
+  position: relative;
+}
+
+/* Uncompleted task creation part 2 */
+.list-container li::before {
+  content: "";
+  /* border: black 1px solid; */
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 7px;
+  left: -20px;
+  border-radius: 50%;
+  background-color: rgb(0, 217, 255);
+}
+
+/* Completed task creation part 1 */
+.list-container li.checked {
+  text-decoration: line-through;
+}
+
+/* Completed task creation part 2 */
+.list-container li.checked::before {
+  content: "";
+  /* border: black 1px solid; */
+  position: absolute;
+  background-size: cover;
+  background-image: url(images/checkmark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  /* top: 7px;
+  left: -17px; */
+  /* border-radius: 50%;
+  background-color: green; */
+}

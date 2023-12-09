@@ -1,4 +1,4 @@
-// Create a slot machine to review some javascript concepts
+// Create a slot machine to review some javascript
 // 1) Put some money in the slot machine (deposit)
 let prompt = require("prompt-sync")(); // Import the module for allowing user prompts
 
