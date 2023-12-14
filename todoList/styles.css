@@ -8,7 +8,6 @@
   height: 100vh;
   width: 100%; /* necessary? */
   background: linear-gradient(to right, rgb(5, 96, 152), rgb(26, 33, 181));
-  /* padding: 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,15 +16,11 @@
 /* Aligning the items center (caption + search box) */
 .todo-list-container {
   width: 350px;
-  height: 250px;
+  min-height: 150px;
   background-color: white;
   border-radius: 10px;
   margin-bottom: 150px;
-  /* padding: 40px; */
-  /* display: flex;
-  align-items: center;
-  justify-content: left;
-  flex-direction: column; */
+  padding-bottom: 50px;
 }
 
 .todo-header-img {
@@ -75,8 +70,6 @@
 .list-container {
   display: flex;
   flex-direction: column;
-  /* border: red 1px solid; */
-  /* justify-content: center; */
   align-items: left baseline;
   padding-left: 40px; /* Adjust as needed for bullet point formatting */
   margin-top: 10px;
@@ -86,15 +79,13 @@
 .list-container li {
   list-style-type: none;
   padding-top: 5px;
-  padding-bottom: 5px;
-  /* border: blue 1px solid; */
+  padding-bottom: 6px;
   position: relative;
 }
 
 /* Uncompleted task creation part 2 */
 .list-container li::before {
   content: "";
-  /* border: black 1px solid; */
   position: absolute;
   height: 15px;
   width: 15px;
@@ -112,14 +103,31 @@
 /* Completed task creation part 2 */
 .list-container li.checked::before {
   content: "";
-  /* border: black 1px solid; */
   position: absolute;
   background-size: cover;
   background-image: url(images/checkmark.png);
   background-position: center;
   background-repeat: no-repeat;
-  /* top: 7px;
-  left: -17px; */
-  /* border-radius: 50%;
-  background-color: green; */
+}
+
+.list-container li span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  right: 24px;
+  top: 6px;
+  font-size: 9px;
+  color: grey;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.list-container li span:hover {
+  background-color: lightgrey;
+  color: white;
 }
