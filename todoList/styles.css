@@ -17,6 +17,7 @@
 .todo-list-container {
   width: 350px;
   min-height: 150px;
+  max-height: 500px;
   background-color: white;
   border-radius: 10px;
   margin-bottom: 150px;
@@ -80,7 +81,9 @@
   list-style-type: none;
   padding-top: 5px;
   padding-bottom: 6px;
+  margin-right: 40px;
   position: relative;
+  word-break: break-all;
 }
 
 /* Uncompleted task creation part 2 */
@@ -118,9 +121,9 @@
   border-radius: 50%;
   width: 14px;
   height: 14px;
-  right: 24px;
+  right: -20px;
   top: 6px;
-  font-size: 9px;
+  font-size: 8px;
   color: grey;
   font-weight: bold;
   cursor: pointer;

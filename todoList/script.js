@@ -1,9 +1,17 @@
 const inputTask = document.getElementById("input-text");
 const listContainer = document.getElementsByClassName("list-container");
+const entireContainer = document.querySelector(".todo-list-container");
 
 // Method 1 of click event for adding todo:
 // - add onclick="addTodo" in ul element
 const addTodo = () => {
+  // Check if there are too many todos because we don't want the container heigh to go past the top of page
+  if (entireContainer.offsetHeight > 500) {
+    alert("You must complete some todos!");
+    inputTask.value = "";
+    return;
+  }
+
   if (inputTask.value === "") {
     alert("You have to add a todo!");
   } else {
@@ -17,6 +25,7 @@ const addTodo = () => {
       listElement.appendChild(innerSpan); // Final product: <li class="checked"><span><span>[content]</li>
     }
   }
+
   inputTask.value = "";
   saveData();
 };
@@ -61,5 +70,4 @@ function showTodos() {
   listContainer[0].innerHTML = localStorage.getItem("allTodos");
 }
 showTodos();
-
 // localStorage.clear(); // Clears all the data
