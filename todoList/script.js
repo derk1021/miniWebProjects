@@ -33,17 +33,30 @@ const addTodo = () => {
 // Method 2 of click event for adding todo:
 // - add id="add-todo" in ul element
 // - add "const addTodo = document.getElementById("add-todo");" at top of code
-// addTodo.addEventListener("click", () => {
+// document.getElementById("buttonelement").addEventListener("click", () => {
+//   // Check if there are too many todos because we don't want the container heigh to go past the top of page
+//   if (entireContainer.offsetHeight > 500) {
+//     alert("You must complete some todos!");
+//     inputTask.value = "";
+//     return;
+//   }
+
 //   if (inputTask.value === "") {
 //     alert("You have to add a todo!");
 //   } else {
-// if (listContainer.length > 0) {
-//     let listElement = document.createElement("li");
-//     listElement.innerHTML = inputTask.value;
-//     listElement.classList.add("checked");
-//     listContainer[0].appendChild(listElement);
+//     if (listContainer.length > 0) {
+//       // Adds the child <li> element to <ul>
+//       let listElement = document.createElement("li"); // Creates the nested <li> element within <> -> <li></li>
+//       listElement.innerHTML = inputTask.value; // Takes your input and turns it into your HTML content -> <li>[content]</li>
+//       let innerSpan = document.createElement("span");
+//       innerSpan.innerHTML = "X";
+//       listContainer[0].appendChild(listElement); // Nest <li class="checked">[content]</li> as child of ul -> <ul><li class="checked">[content]</li></ul>
+//       listElement.appendChild(innerSpan); // Final product: <li class="checked"><span><span>[content]</li>
+//     }
 //   }
-// }
+
+//   inputTask.value = "";
+//   saveData();
 // });
 
 listContainer[0].addEventListener("click", (e) => {
